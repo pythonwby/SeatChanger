@@ -1,6 +1,7 @@
 # Ui_Dialog_Set_Seat of SeatChanger v1.0.2
-from PyQt6 import QtCore, QtGui, QtWidgets
 import datetime
+
+from PyQt6 import QtCore, QtWidgets
 
 
 class Ui_Dialog_Set_Seat(object):

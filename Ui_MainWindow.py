@@ -1,14 +1,15 @@
 # Ui_MainWindow of SeatChanger v1.0.2
 from PyQt6 import QtCore, QtGui, QtWidgets
 
+from Ui_Dialog_About import Ui_Dialog_About
+from Ui_Dialog_Set_Seat import Ui_Dialog_Set_Seat
+
 
 class Ui_MainWindow(object):
-    def __init__(self, SeatImage1, Ui_Dialog_Set_Seat, Flag_Cancel, SeatListShare, Ui_Dialog_About, Window, Font_Table):
+    def __init__(self, SeatImage1, Flag_Cancel, SeatListShare, Window, Font_Table):
         self.SeatImage1 = SeatImage1
-        self.Ui_Dialog_Set_Seat = Ui_Dialog_Set_Seat
         self.Flag_Cancel = Flag_Cancel
         self.SeatListShare = SeatListShare
-        self.Ui_Dialog_About = Ui_Dialog_About
         self.Window = Window
         self.Font_Table = Font_Table
 
@@ -66,7 +67,7 @@ class Ui_MainWindow(object):
     def open_seat_set_dialog(self):
         print("Seat Set Dialog Opened.")
         dialog = QtWidgets.QDialog(parent=self.Window)
-        dialog_ui = self.Ui_Dialog_Set_Seat(self.SeatListShare, self.SeatImage1, self.Flag_Cancel)
+        dialog_ui = Ui_Dialog_Set_Seat(self.SeatListShare, self.SeatImage1, self.Flag_Cancel)
         dialog_ui.setupUi(dialog)
         dialog.show()
         dialog.exec()
@@ -83,7 +84,7 @@ class Ui_MainWindow(object):
     def open_about_dialog(self):
         print("About Dialog Opened.")
         dialog = QtWidgets.QDialog(parent=self.Window)
-        dialog_ui = self.Ui_Dialog_About()
+        dialog_ui = Ui_Dialog_About()
         dialog_ui.setupUi(dialog)
         dialog.show()
         dialog.exec()

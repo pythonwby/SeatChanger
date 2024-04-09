@@ -1,5 +1,5 @@
 # Ui_Dialog_About of SeatChanger v1.0.2
-from PyQt6 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtWidgets
 
 
 class Ui_Dialog_About(object):
@@ -29,7 +29,7 @@ class Ui_Dialog_About(object):
         Dialog.resize(400, 300)
         Dialog.setWindowTitle(_translate("Dialog", "关于"))
         # self.label_2.setText(_translate("Dialog", "该项目已在Github上开源:github.com/pythonwby/SeatChanger"))
-        self.label.setText(_translate("Dialog", "座位计算器v1.0.1 By 乌搏猿 2024.4.7"))
+        self.label.setText(_translate("Dialog", "座位计算器v1.0.2 By 乌搏猿 2024.4.7"))
         self.textEdit.setText('''该项目已在Github上开源:
 github.com/pythonwby/SeatChanger
 
