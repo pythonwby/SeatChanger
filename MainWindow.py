@@ -1,8 +1,8 @@
 # Ui_MainWindow of SeatChanger v1.0.2
 from PyQt6 import QtCore, QtGui, QtWidgets
 
-from Ui_Dialog_About import Ui_Dialog_About
-from Ui_Dialog_Set_Seat import Ui_Dialog_Set_Seat
+from AboutWindow import Ui_Dialog_About
+from SeatListWindow import Ui_Dialog_Set_Seat
 
 
 class Ui_MainWindow(object):

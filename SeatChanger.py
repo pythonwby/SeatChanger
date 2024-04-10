@@ -5,7 +5,7 @@ import sys
 from PyQt6 import QtGui, QtWidgets
 
 from SeatImageClass import SeatImageClass
-from Ui_MainWindow import Ui_MainWindow
+from MainWindow import Ui_MainWindow
 
 Font_UI = QtGui.QFont("等线", 11)
 Font_Table = QtGui.QFont("等线", 12)

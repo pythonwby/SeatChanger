@@ -7,6 +7,11 @@ This project is only for the calculation of seat change in Class 2,Grade 8 of Wu
 
 更新日志：
 
+**2024-4-10 v1.0.2**
+* 优化代码结构，将原来的单文件拆分成多个模块
+* 重写了"关于"窗口
+* 变更Python版本为3.10.14
+
 **2024-4-7 v1.0.1**
 * 修改了原有的座位列表，使其与当天调整的座位相同
 * 修复了之前无法自动更具日期在启动时推算至当前座位的问题
