@@ -1,4 +1,6 @@
-# SeatImageClass of SeatChanger v1.0.2
+# SeatImageClass of SeatChanger v1.0.3
+# Updated on 2024.4.10
+
 import datetime
 
 

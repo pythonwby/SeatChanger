@@ -1,4 +1,6 @@
-# Ui_MainWindow of SeatChanger v1.0.2
+# Ui_MainWindow of SeatChanger v1.0.3
+# Updated on 2024.5.12
+
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 from AboutWindow import Ui_Dialog_About
@@ -6,12 +8,13 @@ from SeatListWindow import Ui_Dialog_Set_Seat
 
 
 class Ui_MainWindow(object):
-    def __init__(self, SeatImage1, Flag_Cancel, SeatListShare, Window, Font_Table):
+    def __init__(self, SeatImage1, Flag_Cancel, SeatListShare, Window, Font_Table, Value):
         self.SeatImage1 = SeatImage1
         self.Flag_Cancel = Flag_Cancel
         self.SeatListShare = SeatListShare
         self.Window = Window
         self.Font_Table = Font_Table
+        self.Value = Value
 
     week_cnt = 0
     SeatImageItem = [[QtWidgets.QTableWidgetItem for j in range(7)] for i in range(8)]
@@ -67,7 +70,7 @@ class Ui_MainWindow(object):
     def open_seat_set_dialog(self):
         print("Seat Set Dialog Opened.")
         dialog = QtWidgets.QDialog(parent=self.Window)
-        dialog_ui = Ui_Dialog_Set_Seat(self.SeatListShare, self.SeatImage1, self.Flag_Cancel)
+        dialog_ui = Ui_Dialog_Set_Seat(self.SeatListShare, self.SeatImage1, self.Flag_Cancel, self.Value)
         dialog_ui.setupUi(dialog)
         dialog.show()
         dialog.exec()
@@ -75,6 +78,7 @@ class Ui_MainWindow(object):
             self.Flag_Cancel[0] = False
             return
         thurs = self.SeatImage1.count_thursdays(self.SeatImage1.StartDate)
+        thurs += self.Value[0]
         self.refresh_table_widget()
         for i in range(thurs):
             self.update_table_widget(True)
@@ -91,7 +95,7 @@ class Ui_MainWindow(object):
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(519, 459)
+        MainWindow.resize(520, 470)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.centralwidget)
@@ -135,6 +139,9 @@ class Ui_MainWindow(object):
         self.pushButton_2.setSizePolicy(sizePolicy)
         self.pushButton_2.setObjectName("pushButton_2")
         self.gridLayout.addWidget(self.pushButton_2, 0, 3, 1, 1)
+        self.label_2 = QtWidgets.QLabel(parent=self.centralwidget)
+        self.label_2.setObjectName("label_2")
+        self.gridLayout.addWidget(self.label_2, 2, 0, 1, 5)
         self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menuBar = QtWidgets.QMenuBar(parent=MainWindow)
@@ -153,6 +160,8 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", f"当前周"))
         self.pushButton.setText(_translate("MainWindow", "上一周"))
         self.pushButton_2.setText(_translate("MainWindow", "下一周"))
+        self.label_2.setText(_translate("MainWindow", "注意：第5列前后奇数和偶数座位可自行更换，没有严格要求。"))
+
         self.pushButton.clicked.connect(self.last_week)
         self.pushButton_2.clicked.connect(self.next_week)
         self.menuBar.addAction(self.set_seat_action)
@@ -169,6 +178,7 @@ class Ui_MainWindow(object):
         self.refresh_table_widget()
 
         thurs = self.SeatImage1.count_thursdays(self.SeatImage1.StartDate)
+        thurs += self.Value[0]
         self.refresh_table_widget()
         for i in range(thurs):
             self.update_table_widget(True)

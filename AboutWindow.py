@@ -1,3 +1,6 @@
+# Ui_Dialog_About of SeatChanger v1.0.3
+# Updated on 2024.4.10
+
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
@@ -25,12 +28,14 @@ class Ui_Dialog_About(object):
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
+
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "关于"))
         self.label_2.setText(_translate("Dialog", "制作本程序使用的软件和工具："))
-        self.label.setText(_translate("Dialog", "座位计算器v1.0.2 By 乌搏猿 2024.4.10"))
-        self.label_3.setText(_translate("Dialog", "该项目已在Github上开源:<a href=\'github.com/pythonwby/SeatChanger\'>github.com/pythonwby/SeatChanger</a>"))
+        self.label.setText(_translate("Dialog", "座位计算器v1.0.3 By 乌搏猿 2024.5.12"))
+        self.label_3.setText(_translate("Dialog",
+                                        "该项目已在Github上开源:<a href=\'github.com/pythonwby/SeatChanger\'>github.com/pythonwby/SeatChanger</a>"))
         self.label_3.setTextInteractionFlags(QtCore.Qt.TextInteractionFlag.TextSelectableByMouse)
         self.textEdit.setText('''Python 3.10.14
 MiniConda
