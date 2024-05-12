@@ -1,7 +1,7 @@
 # Ui_Dialog_About of SeatChanger v1.0.3
 # Updated on 2024.4.10
 
-from PyQt6 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtWidgets
 
 
 class Ui_Dialog_About(object):
