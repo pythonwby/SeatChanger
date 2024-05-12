@@ -38,6 +38,7 @@ class Ui_Dialog_About(object):
                                         "该项目已在Github上开源:<a href=\'github.com/pythonwby/SeatChanger\'>github.com/pythonwby/SeatChanger</a>"))
         self.label_3.setTextInteractionFlags(QtCore.Qt.TextInteractionFlag.TextSelectableByMouse)
         self.textEdit.setText('''Python 3.10.14
+Python 3.8.19 (only Win7 version)
 MiniConda
 PyCharm Community Edition
 PyQt6
