@@ -2,6 +2,9 @@ SeatChanger
 
 下载说明：点右边的Releases下面的版本号，下载Assets里面的exe文件。
 
+蓝奏云网盘:https://wwk.lanzoul.com/b009g4ktyj
+密码:gj6d
+
 更新日志：
 
 **2024-5-12 v1.0.3**
