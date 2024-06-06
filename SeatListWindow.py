@@ -1,4 +1,4 @@
-# Ui_Dialog_Set_Seat of SeatChanger v1.0.3
+# Ui_Dialog_Set_Seat of SeatChanger v1.0.4
 # Updated on 2024.5.12
 
 import datetime

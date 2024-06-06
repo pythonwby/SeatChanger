@@ -2,10 +2,12 @@ SeatChanger
 
 下载说明：点右边的Releases下面的版本号，下载Assets里面的exe文件。
 
-蓝奏云网盘:https://wwk.lanzoul.com/b009g4ktyj
-密码:gj6d
+蓝奏云网盘:https://wwk.lanzoul.com/b009g72o8d
+密码:5nlb
 
 更新日志：
+**2024-6-6 v1.0.4**
+* 仅更新当天更换的座位列表
 
 **2024-5-12 v1.0.3**
 * 新增偏移量功能，用于调整假期等不符合正常座位更换规律的情况
